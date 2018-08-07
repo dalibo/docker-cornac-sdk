@@ -17,6 +17,7 @@ RUN pip --no-cache-dir install --upgrade \
         ansible \
         psycopg2-binary \
         pytest \
+        pytest-timeout \
         setuptools \
         testinfra \
         ;
