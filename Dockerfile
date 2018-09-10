@@ -6,9 +6,14 @@ RUN set -eux; \
     apt-get update -y; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         build-essential \
+        bzip2 \
         git \
         make \
+        p7zip-full \
         rsync \
+        tar \
+        xz-utils \
+        zip \
         ; \
     apt-get clean; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
