@@ -3,7 +3,7 @@ VERSION=latest
 
 default:
 
-debian:
+debian centos7:
 	docker build -t $(NAME):$@ -f Dockerfile.$@ .
 
 clean:
