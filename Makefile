@@ -3,8 +3,8 @@ VERSION=latest
 
 default:
 
-build:
-	docker build -t $(NAME):$(VERSION) .
+debian centos7:
+	docker build -t $(NAME):$@ -f Dockerfile.$@ .
 
 clean:
 	docker images --quiet $(NAME) | xargs --no-run-if-empty --verbose docker rmi -f
