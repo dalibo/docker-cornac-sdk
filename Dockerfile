@@ -8,6 +8,7 @@ RUN set -eux; \
         build-essential \
         bzip2 \
         git \
+        libev-dev \
         make \
         p7zip-full \
         rsync \
