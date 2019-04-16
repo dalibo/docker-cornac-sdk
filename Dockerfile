@@ -21,6 +21,7 @@ RUN set -eux; \
 
 RUN pip --no-cache-dir install --upgrade \
         ansible \
+        bjoern \
         psycopg2-binary \
         pytest \
         pytest-timeout \
