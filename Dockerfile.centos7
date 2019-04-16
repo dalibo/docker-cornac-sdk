@@ -30,7 +30,7 @@ RUN set -ex; \
     :
 
 RUN set -ex; \
-    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3.6 --force --yes
+    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3.6 - --force --yes
 
 ENV PATH /root/.poetry/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
