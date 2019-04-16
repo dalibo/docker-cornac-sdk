@@ -23,6 +23,7 @@ RUN pip --no-cache-dir install --upgrade \
         ansible \
         bjoern \
         psycopg2-binary \
+        poetry \
         pytest \
         pytest-timeout \
         setuptools \
