@@ -37,6 +37,7 @@ RUN set -ex; \
 RUN set -ex; \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python - --force --yes; \
     sed -i '1s/python$/python3.6/' /root/.poetry/bin/poetry; \
+    poetry --version; \
     :
 
 RUN gem install --no-ri --no-rdoc fpm; \
