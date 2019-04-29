@@ -13,6 +13,7 @@ RUN set -ex; \
     yum -q -y install \
         git \
         libev-devel \
+        libvirt-devel \
         make \
         net-tools \
         openssl \
@@ -20,6 +21,7 @@ RUN set -ex; \
         psmisc \
         python36-devel \
         python36-pip \
+        python36-virtualenv \
         rpm-build \
         rsync \
         sudo \
