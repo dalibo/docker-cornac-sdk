@@ -11,6 +11,7 @@ RUN set -ex; \
 
 RUN set -ex; \
     yum -q -y install \
+        gcc \
         git \
         libev-devel \
         libvirt-devel \
