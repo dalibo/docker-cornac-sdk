@@ -26,6 +26,7 @@ RUN set -ex; \
         python36-virtualenv \
         rpm-build \
         rsync \
+        ruby-devel \
         sudo \
         yum-utils \
     ; \
@@ -36,6 +37,10 @@ RUN set -ex; \
 RUN set -ex; \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python - --force --yes; \
     sed -i '1s/python$/python3.6/' /root/.poetry/bin/poetry; \
+    :
+
+RUN gem install --no-ri --no-rdoc fpm; \
+    fpm --version; \
     :
 
 ENV LANG en_US.UTF-8
