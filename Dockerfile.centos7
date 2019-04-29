@@ -37,6 +37,7 @@ RUN set -ex; \
     sed -i '1s/python$/python3.6/' /root/.poetry/bin/poetry; \
     :
 
+ENV LANG en_US.UTF-8
 ENV PATH /root/.poetry/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
