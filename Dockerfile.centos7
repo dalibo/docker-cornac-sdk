@@ -21,6 +21,7 @@ RUN set -ex; \
         psmisc \
         python36-devel \
         python36-pip \
+        python36-setuptools \
         python36-virtualenv \
         rpm-build \
         rsync \
