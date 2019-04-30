@@ -21,6 +21,7 @@ RUN set -ex; \
         make \
         net-tools \
         openssl \
+        postgresql-devel \
         procps-ng \
         psmisc \
         python36-devel \
