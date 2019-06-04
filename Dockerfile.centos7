@@ -40,7 +40,7 @@ RUN set -ex; \
     :
 
 RUN set -ex; \
-    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python - --force --yes; \
+    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python - --force --yes --preview --version 1.0.0a3; \
     sed -i '1s/python$/python3.6/' /root/.poetry/bin/poetry; \
     poetry --version; \
     :
