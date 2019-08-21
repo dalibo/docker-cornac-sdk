@@ -20,6 +20,7 @@ RUN set -ex; \
         libvirt-devel \
         make \
         net-tools \
+        nginx \
         openssh-clients \
         openssl \
         postgresql-devel \
