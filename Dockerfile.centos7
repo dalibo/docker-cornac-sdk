@@ -13,9 +13,10 @@ RUN set -ex; \
     :
 
 RUN set -ex; \
+    rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco ; \
+    yum makecache fast; \
     yum -q -y install \
         gcc \
-        git \
         libev-devel \
         libvirt-devel \
         make \
@@ -35,6 +36,8 @@ RUN set -ex; \
         ruby-devel \
         sudo \
         yum-utils \
+        http://opensource.wandisco.com/centos/7/git/x86_64/perl-Git-2.22.0-1.WANdisco.437.noarch.rpm \
+        http://opensource.wandisco.com/centos/7/git/x86_64/git-2.22.0-1.WANdisco.437.x86_64.rpm \
     ; \
     yum clean all ; \
     yum makecache fast; \
