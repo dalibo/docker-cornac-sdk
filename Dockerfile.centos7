@@ -43,6 +43,15 @@ RUN set -ex; \
     yum makecache fast; \
     :
 
+RUN set -ex; \
+    pip3 install \
+      --disable-pip-version-check \
+      --no-cache-dir \
+      --upgrade \
+      wheel \
+    ; \
+    :
+
 # See https://github.com/sdispater/poetry/issues/721
 RUN set -ex; \
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3 - --force --yes --preview --version 1.0.0b1; \
