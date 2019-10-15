@@ -63,7 +63,8 @@ RUN set -ex; \
     poetry --version; \
     :
 
-RUN gem install --no-ri --no-rdoc fpm; \
+RUN set -ex; \
+    gem install --no-ri --no-rdoc fpm; \
     fpm --version; \
     :
 
