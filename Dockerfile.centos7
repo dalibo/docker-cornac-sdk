@@ -14,6 +14,9 @@ RUN set -ex; \
 
 RUN set -ex; \
     rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco ; \
+    yum -q -y install \
+        https://rpm.nodesource.com/pub_10.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
+        ; \
     yum makecache fast; \
     yum -q -y install \
         gcc \
@@ -22,6 +25,7 @@ RUN set -ex; \
         make \
         net-tools \
         nginx \
+        nodejs \
         openssh-clients \
         openssl \
         postgresql-devel \
@@ -61,6 +65,11 @@ RUN set -ex; \
 
 RUN gem install --no-ri --no-rdoc fpm; \
     fpm --version; \
+    :
+
+RUN set -ex; \
+    node --version ; \
+    npm --version ; \
     :
 
 ENTRYPOINT ["/usr/local/sbin/tini", "-gw", "--"]
