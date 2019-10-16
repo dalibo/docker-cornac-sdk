@@ -20,6 +20,7 @@ RUN set -ex; \
     yum makecache fast; \
     yum -q -y install \
         gcc \
+        jq \
         libev-devel \
         libvirt-devel \
         make \
