@@ -29,6 +29,7 @@ RUN set -ex; \
         nodejs \
         openssh-clients \
         openssl \
+        policycoreutils-python \
         postgresql-devel \
         procps-ng \
         psmisc \
