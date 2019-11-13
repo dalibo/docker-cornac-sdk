@@ -55,7 +55,7 @@ RUN set -ex; \
       --no-cache-dir \
       --prefix /usr/local \
       --upgrade \
-      pip3 \
+      pip \
       wheel \
     ; \
     :
