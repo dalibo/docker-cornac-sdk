@@ -62,7 +62,7 @@ RUN set -ex; \
 
 # See https://github.com/sdispater/poetry/issues/721
 RUN set -ex; \
-    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3 - --force --yes --preview --version 1.0.5; \
+    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3 - --force --yes --preview --version 1.0.8; \
     sed -i '1s,^.*python$,#!/usr/bin/python3,' /root/.poetry/bin/poetry; \
     poetry --version; \
     :
