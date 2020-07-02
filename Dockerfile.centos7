@@ -67,7 +67,9 @@ RUN set -ex; \
     poetry --version; \
     :
 
+# latest ffi are not compatible with centos7 ruby version.
 RUN set -ex; \
+    gem install --version "<1.13" --no-ri --no-rdoc ffi; \
     gem install --no-ri --no-rdoc fpm; \
     fpm --version; \
     :
